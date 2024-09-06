@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: ff0000 #ff0000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Enter Your Personal Information</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="Middle_Name">Middle Name</label>
+            <input type="text" id="Middle_Name" name= Middle_Name required>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+            
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin" name="linkedin">
+            
+            <label for="github">GitHub:</label>
+            <input type="url" id="github" name="github">
+            
+            <label for="portfolio">Portfolio:</label>
+            <input type="url" id="portfolio" name="portfolio">
+
+            <label for "Married?">Married?</label>
+            <input type="radio" id="married" name="married"> Yes
+            <input type="radio" id="married" name="married"> No
+
+            <label for "Subjects Choosen">Subjects</label>
+            <input type="checkbox">
+            <option>Physics</option>
+            <input type="checkbox">
+            <option>Physics</option>            
+            <input type="checkbox">
+            <option>Physics</option>            
+            <input type="checkbox">
+            <option>Physics</option>            
+            <input type="checkbox">
+            <option>Physics</option>            
+            <input type="checkbox">
+            <option>Physics</option>            
+            <input type="checkbox">
+            <option>Physics</option>
+
+                
+            
+            <label for="profile_summary">Profile Summary:</label>
+            <textarea id="profile_summary" name="profile_summary"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
